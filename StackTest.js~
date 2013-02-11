@@ -1,0 +1,65 @@
+/**
+*
+* Simple tests making sure Enqueue, Dequeue, Size and Clear work as expected.
+*
+* @author Aidan Church (aidanchurch@gmail.com)
+*
+**/
+var assert = require("assert");
+
+var q = require("./Queue");
+
+describe("Queue", function(){
+
+    describe("#size()",function(){
+
+	it("size should change as values are enqueued and dequeued", function(){
+
+	    var q = require("./Queue");
+
+	    assert.equal(q.size(),0);
+
+	    q.enqueue(1);
+
+	    assert.equal(q.size(),1);
+
+	    q.enqueue(4);
+
+	    assert.equal(q.size(),2);
+
+	    q.dequeue();
+
+	    assert.equal(q.size(),1);
+
+	    q.clear();
+
+	});
+
+     });
+
+    describe("#dequeue()", function(){
+
+	it("The queue should maintain the FIFO principal", function(){
+
+	    q.enqueue(1);
+
+	    q.enqueue(2);
+
+	    q.enqueue(3);
+
+	    assert.equal(q.dequeue(), 1);
+
+	    assert.equal(q.dequeue(), 2);
+
+	    q.enqueue(4);
+
+	    assert.equal(q.dequeue(), 3);
+
+	    q.clear();
+
+	});
+
+    });
+
+});
+
