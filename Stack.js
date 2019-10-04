@@ -57,7 +57,26 @@
 
 		this.arr = [];
 
-	    }
+	   }
+
+            /**
+	   *
+	   * Returns True if the Stack is empty or Flase if the stack is not empty
+	   *
+	   */
+            isEmpty: function(){
+                 return this.arr.length===0 ;
+           }            
+           
+           /**
+	   *
+	   *Retrieves the element on the top of the Stack
+	   *
+	   */
+           get_top: function(){
+                  return this.arr[this.arr.length-1];
+           } 
+
 
 	}
 
