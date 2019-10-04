@@ -57,7 +57,7 @@
 
 		this.arr = [];
 
-	   }
+	   },
 
             /**
 	   *
@@ -66,7 +66,7 @@
 	   */
             isEmpty: function(){
                  return this.arr.length===0 ;
-           }            
+           },           
            
            /**
 	   *
@@ -75,7 +75,7 @@
 	   */
            get_top: function(){
                   return this.arr[this.arr.length-1];
-           } 
+           }, 	
 
 
 	}
