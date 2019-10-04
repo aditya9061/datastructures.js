@@ -76,7 +76,7 @@
            get_top: function(){
                   return this.arr[this.arr.length-1];
            }, 	
-
+	
 
 	}
 
